@@ -9,5 +9,5 @@
 
         mvn package
 
-Build instructions
+### Run instructions
   - java -jar target/contact-search-1.0-SNAPSHOT.jar
