@@ -10,4 +10,6 @@
         mvn package
 
 ### Run instructions
-  - java -jar target/contact-search-1.0-SNAPSHOT.jar
+- Run:
+
+        java -jar target/contact-search-1.0-SNAPSHOT.jar
