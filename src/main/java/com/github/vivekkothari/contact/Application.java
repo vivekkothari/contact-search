@@ -1,6 +1,8 @@
 package com.github.vivekkothari.contact;
 
 import com.github.vivekkothari.contact.bean.Contact;
+import com.github.vivekkothari.contact.dao.Trie;
+import com.github.vivekkothari.contact.dao.TrieDaoImpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -13,7 +15,8 @@ public class Application {
     private static final String OPTIONS = "1) Add contact 2) Search 3) Exit";
 
     public static void main(String[] args) {
-        final ContactService contactService = new ContactService(new InMemoryContactDao());
+        final IContactDao contactDao = new TrieDaoImpl(new Trie());
+        final ContactService contactService = new ContactService(contactDao);
 
         Scanner scanner = new Scanner(System.in);
         do {
